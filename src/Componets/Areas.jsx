@@ -10,15 +10,15 @@ export default function Areas({ onScrollToInterests }) {
   return (
     <Box
       sx={{
-        height:  { xs: '5', sm: '100vh', md:' 100vh' },
+        height:  { xs:'auto', sm: '100vh', md:' 100vh' },
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#f0f0f0',
-        padding: { xs: 2, sm: 1, md: 1 },
+       
+      padding: { xs: 2, sm: 1, md: 1 },
         textAlign: 'center',
-        margintop:{ xs: 2  }
+        marginTop: { xs: '50px', sm: '1px' },
       }}
     >
       <Stack
@@ -47,6 +47,7 @@ export default function Areas({ onScrollToInterests }) {
               borderRadius: 4,
               border: `12px solid ${isSmallScreen ? '#f8bbd0' : '#f8bbd0'}`,
               borderWidth: isSmallScreen ? '5px' : '15px',
+              
             }}
           />
         </motion.div>
