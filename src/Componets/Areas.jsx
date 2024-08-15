@@ -10,7 +10,7 @@ export default function Areas({ onScrollToInterests }) {
   return (
     <Box
       sx={{
-        height:  { xs: '2vh', sm: '100vh', md:' 100vh' },
+        height:  { xs: '5', sm: '100vh', md:' 100vh' },
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
