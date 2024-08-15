@@ -11,3 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.welcome-gif {
+  width: 40px; /* Ajusta el tamaño del GIF según sea necesario */
+  height: auto; /* Mantiene la proporción original */
+}

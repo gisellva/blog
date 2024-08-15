@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React, { useRef } from 'react';
 import './App.css';
+import Areas from './Componets/Areas';
+import Interests from './Componets/Interests';
+import NavbarComponent from './Componets/NavbarComponent';
 
 function App() {
+  const interestsRef = useRef(null);
+
+  const scrollToInterests = () => {
+    if (interestsRef.current) {
+      interestsRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavbarComponent />
+      <Areas onScrollToInterests={scrollToInterests} />
+      <Interests interestsRef={interestsRef} />
     </div>
   );
 }
