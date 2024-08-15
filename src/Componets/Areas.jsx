@@ -10,7 +10,7 @@ export default function Areas({ onScrollToInterests }) {
   return (
     <Box
       sx={{
-        height: '100vh',
+        height:  { xs: '2vh', sm: '100vh', md:' 100vh' },
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -18,6 +18,7 @@ export default function Areas({ onScrollToInterests }) {
         backgroundColor: '#f0f0f0',
         padding: { xs: 2, sm: 1, md: 1 },
         textAlign: 'center',
+        margintop:{ xs: 2  }
       }}
     >
       <Stack
@@ -88,13 +89,13 @@ export default function Areas({ onScrollToInterests }) {
       </Stack>
       <motion.div
         animate={{
-          scale: [1, 1.2, 1], // Escala de 1 a 1.2 y de regreso a 1
+          scale: [1, 1.2, 1], 
         }}
         transition={{
-          duration: 0.5, // Duración de cada ciclo de animación
-          ease: 'easeInOut', // Tipo de transición
-          repeat: Infinity, // Repetir infinitamente
-          repeatType: 'loop', // Tipo de repetición
+          duration: 0.5, 
+          ease: 'easeInOut', 
+          repeat: Infinity, 
+          repeatType: 'loop',
         }}
       >
         <IconButton
@@ -103,7 +104,7 @@ export default function Areas({ onScrollToInterests }) {
           color="secondary"
           aria-label="menu"
           sx={{ mr: 2 }}
-          onClick={onScrollToInterests} // Asegúrate de llamar a la función de scroll aquí
+          onClick={onScrollToInterests} 
         >
           <ArrowDownwardIcon sx={{ flexGrow: 1 }} />
         </IconButton>
@@ -111,3 +112,7 @@ export default function Areas({ onScrollToInterests }) {
     </Box>
   );
 }
+
+
+
+
