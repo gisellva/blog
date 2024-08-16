@@ -32,7 +32,7 @@ const images = [
   },
   {
     url: 'https://i.pinimg.com/564x/80/61/a1/8061a1a39bbb41ee3b2bd312bf4d4f57.jpg',
-    title: 'Critical Thinking and Media Literacy',
+    title: 'Critical Thinking',
     width: '30%',
   },
   
@@ -102,13 +102,28 @@ const ImageMarked = styled('span')(({ theme }) => ({
   transition: theme.transitions.create('opacity'),
 }));
 
-export default function Interests({interestsRef}) {
+export default function Interests({ interestsRef, onScrollToFamily, onScrollToHobbies, onScrollToJob ,onScrollToTrip,onScrollToEvents, onScrollToCritical}) {
   return (
     <Box ref={interestsRef} sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
       {images.map((image) => (
         <ImageButton
           focusRipple
           key={image.title}
+          onClick={() => {
+            if (image.title === 'Family') {
+              onScrollToFamily();
+            } if (image.title === 'Hobbies and Interests') {
+              onScrollToHobbies();
+            }if(image.title === 'Job') {
+              onScrollToJob();
+            }if(image.title === 'Trips'){
+              onScrollToTrip()
+            }if(image.title === 'Current Events'){
+              onScrollToEvents()
+            }if (image.title === 'Critical Thinking') {
+              onScrollToCritical()
+            }
+          }}
           style={{
             width: image.width,
           }}
